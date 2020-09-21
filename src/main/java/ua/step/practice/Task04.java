@@ -8,6 +8,7 @@ import java.util.Scanner;
  * <p>
  * Размер массива задается и инициализируется в начале программы.
  */
+
 public class Task04 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
