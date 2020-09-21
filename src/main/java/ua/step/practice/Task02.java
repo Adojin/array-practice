@@ -16,11 +16,22 @@ public class Task02 {
 
         // Использовать для генерирования элементов массива
         Random rnd = new Random(seed);
-
+        int mas1[]= new int[30];
+        int min, max;
         // TODO: Пишите код здесь
         for (int i = 0; i < 30; i++) {
-            System.out.print(rnd.nextInt(51+70) - 70); // 0..120 - 70 = -70..+50
-            System.out.print(" ");
+            mas1[i] = rnd.nextInt(51+70) - 70;
         }
+        min = mas1[0];
+        max = mas1[0];
+        for (int i = 0; i < 30; i++) {
+            if(min > mas1[i]) {
+                min = mas1[i];
+            }
+            if (max < mas1[i]) {
+                max = mas1[i];
+            }
+        }
+        System.out.println(min + " " + max);
     }
 }
