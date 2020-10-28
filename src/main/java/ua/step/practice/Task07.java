@@ -22,7 +22,6 @@ public class Task07 {
     public static void main(String[] args) {
         // TODO: не менять стоки ниже - нобходимо для тестирования @see ua.step.homework01.TaskTest07
         long seed = args.length > 0 ? Long.parseLong(args[0]) : LocalDateTime.now().toEpochSecond(ZoneOffset.UTC);
-
         // Использовать для генерирования элементов массива
         Random rnd = new Random(seed);
 
