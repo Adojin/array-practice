@@ -2,6 +2,7 @@ package ua.step.practice;
 
 import java.time.LocalDateTime;
 import java.time.ZoneOffset;
+import java.util.Arrays;
 import java.util.Random;
 import java.util.Scanner;
 
@@ -29,8 +30,21 @@ public class Task07 {
         System.out.print("Введите размер массива: ");
         int len = scanner.nextInt();
 
-        int[] arr;
         // TODO: Пишите код здесь
-
+        int[] arr = new int[len];
+        final int MAX = 13;
+        final int MIN = 3;
+        for (int i = 0; i < arr.length; i++) {
+            arr[i] = rnd.nextInt(MAX - MIN + 1) + MIN;
+        }
+        int[] count = new int[MAX - MIN + 1];
+        for (int i = 0; i < arr.length; i++) {
+            count[arr[i] - MIN]++;
+        }
+        for (int i = 0; i < arr.length; i++) {
+            if (count[i] > 0) {
+                System.out.printf("%d - %d раза\n", i + MIN, count[i]);
+            }
+        }
     }
 }
